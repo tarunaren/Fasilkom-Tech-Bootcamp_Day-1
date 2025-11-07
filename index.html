@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Profil Taruna Nur Arza</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Poppins,sans-serif;background:linear-gradient(180deg,#2f0435,#5b0a63);color:#eee;line-height:1.4}
+header{position:sticky;top:0;background:rgba(0,0,0,.3);display:flex;justify-content:space-between;align-items:center;padding:.7rem 1rem}
+header a{color:#fff;text-decoration:none;margin:0 .5rem;font-weight:600}
+header a:hover{color:#ffb86b}
+.hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;padding:2rem;text-align:center}
+.hero img{width:120px;height:120px;border-radius:12px;margin-bottom:1rem}
+.hero h1{font-size:1.5rem;color:#fff}
+.hero p{margin:.3rem 0}
+.btn{display:inline-block;padding:.5rem .9rem;border-radius:10px;text-decoration:none;font-weight:600;margin:.3rem}
+.primary{background:#ffb86b;color:#2f0435}
+.ghost{border:1px solid #fff;color:#fff}
+section{padding:2rem 1rem;max-width:900px;margin:auto}
+h2{color:#fff;margin-bottom:.6rem}
+.card{background:rgba(255,255,255,.05);padding:1rem;border-radius:10px;margin:.5rem 0}
+.grid{display:grid;gap:1rem}
+.about .grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.skills .grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+footer{text-align:center;padding:1rem 0;border-top:1px solid rgba(255,255,255,.2);color:#bbb}
+@media(max-width:600px){.hero{flex-direction:column}}
+</style>
+<!-- Link to workspace stylesheet and rare/easter-egg styles -->
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/rare.css">
+</head>
+<body>
+<header>
+  <div><strong>Taruna Nur Arza</strong></div>
+  <nav>
+    <a href="#about">About</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <img src="images/Profil.png" alt="Profil">
+  <div>
+    <h1>Taruna Nur Arza</h1>
+    <p>Mahasiswa FASILKOM • Pengembang Web</p>
+    <a href="#contact" class="btn primary">Hubungi</a>
+    <a href="#about" class="btn ghost">Tentang</a>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h2>Tentang Saya</h2>
+  <p>Saya mahasiswa FASILKOM yang tertarik pada pengembangan front-end dan pengalaman pengguna.</p>
+  <div class="grid">
+    <div class="card"><h3>Deskripsi</h3><p>Suka problem solving dan belajar hal baru.</p></div>
+    <div class="card"><h3>Hobi</h3><p>Koding, desain, kucing.</p></div>
+  </div>
+</section>
+
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card"><h4>HTML & CSS</h4><p>Responsive layout.</p></div>
+    <div class="card"><h4>JS</h4><p>DOM & event handling.</p></div>
+    <div class="card"><h4>React</h4><p>Hooks dasar.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Kontak</h2>
+  <div class="card"><p>Email: <a href="mailto:taruna@example.com">taruna@example.com</a></p></div>
+</section>
+
+<footer>© 2025 Taruna Nur Arza</footer>
+<!-- Rare easter-egg modal (hidden by default) -->
+<div id="rareModal" class="rare-modal" aria-hidden="true" role="dialog" aria-label="Rare Easter Egg">
+  <div class="rare-card">
+    <button class="rare-close" aria-label="Close">&times;</button>
+    <h3>✨ Langka — Rahasia Terbuka</h3>
+    <p>Selamat — Anda menemukan sesuatu yang langka! Taruna's tip: Keep building, stay curious.</p>
+    <div class="rare-art" aria-hidden="true"></div>
+  </div>
+</div>
+
+<script src="js/rare.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+/* Styles for the rare/easter-egg modal and global "rare" effects */
+:root{--rare-accent:#ffd86b;--rare-glow:rgba(255,200,110,0.12)}
+
+/* Modal base */
+.rare-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:2rem;z-index:9999;pointer-events:none;opacity:0;transition:opacity .28s ease;}
+.rare-modal[aria-hidden="false"]{opacity:1;pointer-events:auto}
+
+.rare-card{width:min(720px,92%);background:linear-gradient(180deg,rgba(0,0,0,0.6),rgba(255,255,255,0.02));border-radius:14px;padding:1.25rem 1.25rem;box-shadow:0 20px 60px rgba(0,0,0,0.6);border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.rare-card h3{margin:0 0 .5rem;color:var(--rare-accent)}
+.rare-card p{margin:0 0 1rem;color:rgba(255,255,255,0.9)}
+
+.rare-close{position:absolute;right:1rem;top:1rem;background:transparent;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
+
+/* a little animated art */
+.rare-art{height:140px;border-radius:10px;background:linear-gradient(120deg,#2b0b36 0%, #6a0d6a 30%, #ffb86b 100%);overflow:hidden;position:relative}
+.rare-art::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 10% 20%, rgba(255,255,255,0.08), transparent 6%),radial-gradient(circle at 80% 70%, rgba(255,255,255,0.03), transparent 8%);mix-blend-mode:screen;opacity:.9}
+
+/* subtle moving shimmer */
+.rare-art::after{content:"";position:absolute;left:-60%;top:-40%;width:220%;height:220%;background:linear-gradient(120deg, transparent 35%, rgba(255,255,255,0.06) 45%, rgba(255,255,255,0.02) 55%, transparent 65%);transform:rotate(8deg);animation:rareShine 6s linear infinite}
+@keyframes rareShine{from{transform:translateX(0) rotate(8deg)}to{transform:translateX(-40%) rotate(8deg)}}
+
+/* when the rare effect is active, apply body-level glow/animation */
+body.rare-active{background:radial-gradient(800px 300px at 20% 10%, rgba(255,184,107,0.06), transparent 8%),linear-gradient(180deg,#2b0333,#50114a);transition:background .4s ease}
+
+/* small responsive tweaks */
+@media (max-width:640px){.rare-card{padding:.9rem}.rare-art{height:110px}}
